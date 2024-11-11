@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Programmes d'Apprentissage de l'Anglais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Intégration de Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Intégration de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Styles pour l'impression */
+        @media print {
+            /* Définir la taille de la page et les marges */
+            @page {
+                size: A4;
+                margin: 20mm;
+            }
+
+            body {
+                /* Conserver le fond et les couleurs */
+                /* Note : Les arrière-plans peuvent ne pas s'imprimer selon le navigateur */
+                color: inherit;
+                background: inherit;
+            }
+
+            /* Conserver les éléments essentiels */
+            /* Supprimer la règle qui cache header, footer, nav, etc. */
+            /* header, footer, nav, .no-print {
+                display: none;
+            } */
+
+            /* Conserver les couleurs de fond */
+            /* Retirer les règles qui suppriment les couleurs de fond et définissent le texte en noir */
+            /*
+            .bg-gradient-to-r, .bg-blue-600, .bg-indigo-600, .bg-blue-700, .bg-indigo-500, .bg-blue-800, .bg-indigo-700 {
+                background: none !important;
+                color: #000 !important;
+            }
+            */
+
+            /* Optimiser les tableaux */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            th, td {
+                border: 1px solid #000;
+                padding: 8px;
+                text-align: left;
+            }
+
+            /* Contrôle des sauts de page */
+            section {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+            }
+
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+
+            /* Réduire les marges internes */
+            .container {
+                padding: 0;
+            }
+
+            /* Ajuster les espacements */
+            .mb-16, .mb-12, .mb-8, .mb-6 {
+                margin-bottom: 1em !important;
+            }
+
+            /* Ajuster les polices pour l'impression */
+            h1 {
+                font-size: 24pt;
+            }
+
+            h2 {
+                font-size: 18pt;
+            }
+
+            h3 {
+                font-size: 14pt;
+            }
+
+            p, ul, li, table, th, td {
+                font-size: 12pt;
+                line-height: 1.5;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-8 shadow-lg no-print">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">Programmes d'Apprentissage de l'Anglais</h1>
+            <p class="text-lg md:text-xl">Choisissez le programme adapté à votre niveau et progressez efficacement</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Questions d'Auto-évaluation -->
+        <section id="auto-evaluation" class="mb-16">
+            <div class="flex items-center mb-4">
+                <svg class="h-8 w-8 text-blue-600 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.682 21C6.48 19.65 4.5 17.4 3.75 14.75c-.75-2.65-.525-5.4 0-8.05C4.5 1.35 6.48-.9 8.682 0c2.203.9 4.163 2.65 5.34 5.05C15.84 5.35 17.76 7.1 19.05 9.45c1.29 2.35 2.025 4.95 2.025 7.6 0 2.65-.735 5.25-2.025 7.6-1.29 2.35-3.21 4.1-5.34 5.05z"/>
+                </svg>
+                <h2 class="text-3xl font-semibold text-blue-700">Déterminez Votre Niveau</h2>
+            </div>
+            <p class="mb-6">Avant de choisir votre programme d'apprentissage, répondez aux questions suivantes pour déterminer votre niveau actuel en anglais :</p>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <ol class="list-decimal list-inside space-y-4">
+                    <li><strong>Compréhension Orale :</strong> Pouvez-vous comprendre des conversations simples en anglais, comme les instructions de base ou les annonces publiques ?</li>
+                    <li><strong>Expression Orale :</strong> Êtes-vous capable de vous présenter, de poser des questions simples et de répondre à des questions courantes en anglais ?</li>
+                    <li><strong>Compréhension Écrite :</strong> Pouvez-vous lire et comprendre des textes courts et simples, tels que des courriels basiques ou des articles d'actualité simplifiés ?</li>
+                    <li><strong>Expression Écrite :</strong> Êtes-vous capable d'écrire des phrases simples et de courts paragraphes sur des sujets familiers ?</li>
+                    <li><strong>Grammaire et Vocabulaire :</strong> Connaissez-vous les structures grammaticales de base et possédez-vous un vocabulaire essentiel pour communiquer dans des situations quotidiennes ?</li>
+                    <li><strong>Précision et Fluidité :</strong> Comment évaluez-vous votre capacité à parler anglais sans hésitation et avec une prononciation correcte ?</li>
+                </ol>
+                <p class="mt-4">En fonction de vos réponses :</p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Si vous avez répondu "oui" à la plupart des questions 1 et 2, vous devriez commencer par le <strong>Programme Débutant (Niveau A1-A2)</strong>.</li>
+                    <li>Si vous avez répondu "oui" à la plupart des questions 3 et 4, vous devriez choisir le <strong>Programme Intermédiaire (Niveau B1-B2)</strong>.</li>
+                    <li>Si vous avez répondu "oui" à la plupart des questions 5 et 6, le <strong>Programme Avancé (Niveau C1-C2)</strong> est fait pour vous.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Table des Matières Générale -->
+        <nav class="mb-12 no-print">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-700">Table des Matières</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li><a href="#debutant" class="text-blue-600 hover:text-blue-800 hover:underline">Programme Débutant</a></li>
+                <li><a href="#intermediaire" class="text-blue-600 hover:text-blue-800 hover:underline">Programme Intermédiaire</a></li>
+                <li><a href="#avance" class="text-blue-600 hover:text-blue-800 hover:underline">Programme Avancé</a></li>
+                <li><a href="#conseils" class="text-blue-600 hover:text-blue-800 hover:underline">Conseils Pratiques</a></li>
+                <li><a href="#programme-quotidien" class="text-blue-600 hover:text-blue-800 hover:underline">Programme Quotidien Après les 12 Semaines</a></li>
+                <li><a href="#contenu-alternatif" class="text-blue-600 hover:text-blue-800 hover:underline">Contenu Alternatif</a></li>
+            </ul>
+        </nav>
+
+        <!-- Programme Débutant -->
+        <section id="debutant" class="mb-16">
+            <div class="flex items-center mb-4">
+                <svg class="h-8 w-8 text-blue-600 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h4m0 0h4m-4 0v4m0-4v4m-4 4h4m0 0h4m-4 0v4m0-4v4M4 4h16v16H4V4z" />
+                </svg>
+                <h2 class="text-3xl font-semibold text-blue-700">Programme Débutant (Niveau A1-A2)</h2>
+            </div>
+            <p class="mb-6">Ce programme est conçu pour les apprenants débutants qui souhaitent acquérir les bases de la langue anglaise, y compris la grammaire, le vocabulaire essentiel, la prononciation et la compréhension orale.</p>
+            
+            <!-- Activités -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Activités Hebdomadaires -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2 text-indigo-600">Activités Hebdomadaires</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>📱 <strong>Duolingo</strong> : 1 heure quotidienne pour les bases de grammaire et de vocabulaire.</li>
+                        <li>🧠 <strong>Memrise</strong> : Mémorisez 20 nouveaux mots par jour.</li>
+                        <li>🔊 <strong>Prononciation</strong> : Pratique avec des vidéos YouTube comme <a href="https://www.youtube.com/user/bbclearningenglish" class="text-blue-600 hover:text-blue-800 hover:underline">BBC Learning English</a>.</li>
+                        <li>📚 <strong>Lecture</strong> : Textes simples sur <a href="https://www.simpleenglishnews.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Simple English News</a>.</li>
+                        <li>🎧 <strong>Écoute</strong> : 15 minutes par jour de podcasts pour débutants sur des applications recommandées.</li>
+                        <li>📝 <strong>Exercices</strong> : Utilisez les ressources d'anglais disponibles sur <a href="https://www.youtube.com/user/bbclearningenglish" class="text-blue-600 hover:text-blue-800 hover:underline">BBC Learning English</a> pour des exercices de grammaire et de vocabulaire.</li>
+                        <li>📺 <strong>Visionnage</strong> : Séries disponibles sur Canal+ et MyCanal comme <em>Peppa Pig</em> ou des séries similaires avec sous-titres français.</li>
+                        <li>👩‍🏫 <strong>Conversation avec votre professeur dédié</strong> : Interagissez avec votre professeur dédié pour pratiquer des dialogues simples en anglais.</li>
+                    </ul>
+                </div>
+                <!-- Activités Journalières -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2 text-indigo-600">Activités Journalières</h3>
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <table class="min-w-full">
+                            <thead class="bg-indigo-500 text-white">
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Matin</th>
+                                    <th class="py-2 px-4 border-b">Après-midi</th>
+                                    <th class="py-2 px-4 border-b">Soirée</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">15 min de Duolingo</td>
+                                    <td class="py-2 px-4 border-b">Révision de vocabulaire sur Memrise (30 min)</td>
+                                    <td class="py-2 px-4 border-b">Regarder un épisode de <em>Peppa Pig</em> ou des séries similaires en anglais avec sous-titres français si besoin</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">10 min de lecture</td>
+                                    <td class="py-2 px-4 border-b">Écoute d'un podcast pour débutants sur une application recommandée (15 min)</td>
+                                    <td class="py-2 px-4 border-b">Pratique de la prononciation (15 min)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">10 min de conversation avec votre professeur dédié</td>
+                                    <td class="py-2 px-4 border-b">Révision des notes de vocabulaire (10 min)</td>
+                                    <td class="py-2 px-4 border-b">Écrire un court paragraphe sur votre journée en anglais (10 min)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ressources Spécifiques -->
+            <div class="mt-6">
+                <h3 class="text-2xl font-semibold mb-2 text-indigo-600">Ressources</h3>
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Séries :</strong> <em>Peppa Pig</em>, <em>Sesame Street</em>, <em>Bluey</em>, <em>Paw Patrol</em>, <em>Dora the Explorer</em>, <em>My Little Pony: Friendship Is Magic</em></li>
+                        <li><strong>Podcasts :</strong>
+                            <ul class="list-inside list-disc">
+                                <li><a href="https://www.spotify.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Spotify</a> : Téléchargez des podcasts adaptés aux débutants.</li>
+                                <li><a href="https://anchor.fm/" class="text-blue-600 hover:text-blue-800 hover:underline">Anchor</a> : Enregistrez vos propres sessions de pratique.</li>
+                                <li><a href="https://pocketcasts.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Pocket Casts</a> : Écoute hors ligne avec téléchargement.</li>
+                                <li><a href="https://castbox.fm/" class="text-blue-600 hover:text-blue-800 hover:underline">Castbox</a> : Podcasts à télécharger pour écoute hors ligne.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Chaînes YouTube :</strong> <a href="https://www.youtube.com/user/bbclearningenglish" class="text-blue-600 hover:text-blue-800 hover:underline">BBC Learning English</a>, <a href="https://www.youtube.com/user/englishaddictwithmrdurse" class="text-blue-600 hover:text-blue-800 hover:underline">English Addict with Mr. Duncan</a>, <a href="https://www.youtube.com/user/canalplus" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+ YouTube</a></li>
+                        <li><strong>Applications :</strong> <a href="https://www.duolingo.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Duolingo</a>, <a href="https://www.memrise.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Memrise</a></li>
+                        <li><strong>Plateformes de Streaming :</strong>
+                            <ul class="list-inside list-disc">
+                                <li><a href="https://www.youtube.com/" class="text-blue-600 hover:text-blue-800 hover:underline">YouTube</a> : Chaînes éducatives pour l'apprentissage de l'anglais.</li>
+                                <li><a href="https://tubitv.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Tubi</a> : Films et séries gratuits en anglais avec option de sous-titres français.</li>
+                                <li><a href="https://pluto.tv/" class="text-blue-600 hover:text-blue-800 hover:underline">Pluto TV</a> : Chaînes en direct et à la demande pour divers contenus en anglais.</li>
+                                <li><a href="https://crackle.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Crackle</a> : Films et séries télévisées gratuits en anglais.</li>
+                                <li><a href="https://www.imdb.com/tv/" class="text-blue-600 hover:text-blue-800 hover:underline">IMDb TV</a> : Films et séries gratuits financés par la publicité.</li>
+                                <li><a href="https://www.peacocktv.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Peacock</a> : Version gratuite avec publicités, incluant films et séries en anglais.</li>
+                                <li><a href="https://www.kanopy.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Kanopy</a> : Films et documentaires gratuits via certaines bibliothèques publiques.</li>
+                                <li><a href="https://vimeo.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Vimeo</a> : Vidéos variées, y compris des courts métrages et des documentaires en anglais.</li>
+                                <!-- Ajout des plateformes Canal+ et MyCanal -->
+                                <li><a href="https://www.mycanal.fr/" class="text-blue-600 hover:text-blue-800 hover:underline">MyCanal</a> : Accès à une vaste bibliothèque de séries, films, documentaires et émissions en anglais avec sous-titres français.</li>
+                                <li><a href="https://www.canalplus.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+</a> : Plateforme de streaming offrant du contenu varié en anglais, incluant des films récents, des séries populaires et des documentaires éducatifs.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Outils de Conversation :</strong> <a href="https://character.ai/chat/uc5I6I31YqBLRSLMipGDJAADBxCcZfWYsEuEhqfxFXk" class="text-blue-600 hover:text-blue-800 hover:underline">Votre professeur dédié</a> : Interagissez avec votre professeur dédié pour pratiquer des conversations en anglais.</li>
+                        <li><strong>Playlists BBC Learning English :</strong>
+                            <ul class="list-inside list-disc">
+                                <li><a href="https://www.bbc.co.uk/learningenglish/english/features/6-minute-english" class="text-blue-600 hover:text-blue-800 hover:underline">6 Minute English - Niveau Débutant</a> : Des leçons courtes de 6 minutes couvrant des sujets variés avec un vocabulaire simple et des explications claires.</li>
+                                <li><a href="https://www.bbc.co.uk/learningenglish/english/course/beginner" class="text-blue-600 hover:text-blue-800 hover:underline">English for Beginners</a> : Série spécialement conçue pour les débutants, abordant les bases de la grammaire, du vocabulaire et de la prononciation.</li>
+                                <li><a href="https://www.bbc.co.uk/programmes/p02pc9zn" class="text-blue-600 hover:text-blue-800 hover:underline">The English We Speak - Niveau Débutant</a> : Apprenez des expressions idiomatiques courantes utilisées dans la conversation quotidienne.</li>
+                                <li><a href="https://www.bbc.co.uk/learningenglish/english/course/intermediate/unit-1/session-1" class="text-blue-600 hover:text-blue-800 hover:underline">Basic Grammar</a> : Leçons de grammaire essentielles expliquées de manière simple et accessible.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programme Intermédiaire -->
+        <section id="intermediaire" class="mb-16">
+            <div class="flex items-center mb-4">
+                <svg class="h-8 w-8 text-blue-600 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m2 8H7a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v12a2 2 0 01-2 2z" />
+                </svg>
+                <h2 class="text-3xl font-semibold text-blue-700">Programme Intermédiaire (Niveau B1-B2)</h2>
+            </div>
+            <p class="mb-6">Ce programme est destiné aux apprenants ayant déjà une connaissance de base de l'anglais et souhaitant approfondir leur maîtrise de la grammaire, améliorer leur compréhension orale et développer leurs compétences conversationnelles.</p>
+            
+            <!-- Activités -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Activités Hebdomadaires -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2 text-indigo-600">Activités Hebdomadaires</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>📖 <strong>Grammaire Avancée</strong> : Exercices sur <a href="https://www.englishgrammar.org/" class="text-blue-600 hover:text-blue-800 hover:underline">EnglishGrammar.org</a>.</li>
+                        <li>🎧 <strong>Écoute</strong> : Podcasts comme <a href="https://www.eslpod.com/" class="text-blue-600 hover:text-blue-800 hover:underline">ESL Podcast</a>.</li>
+                        <li>💬 <strong>Conversation</strong> : Sessions sur <strong>iTalki</strong> ou <strong>HelloTalk</strong> pour pratiquer avec des locuteurs natifs.</li>
+                        <li>📝 <strong>Écriture</strong> : Rédaction de courts paragraphes, journaux ou essais.</li>
+                        <li>📺 <strong>Visionnage</strong> : Séries avec sous-titres en anglais ou français, telles que <em>Friends</em>, <em>The Office</em>, <em>Modern Family</em>, <em>How I Met Your Mother</em>.</li>
+                        <li>📝 <strong>Exercices</strong> : Utilisez les ressources d'anglais disponibles sur <a href="https://www.englishgrammar.org/" class="text-blue-600 hover:text-blue-800 hover:underline">EnglishGrammar.org</a> pour des exercices de grammaire avancée.</li>
+                        <li>👩‍🏫 <strong>Conversation avec votre professeur dédié</strong> : Interagissez avec votre professeur dédié pour pratiquer des dialogues intermédiaires en anglais.</li>
+                        <li>📺 <strong>Contenu sur Canal+ et MyCanal</strong> : Séries comme <em>The Good Doctor</em>, <em>House of Cards</em>, <em>Big Little Lies</em> disponibles sur Canal+ et MyCanal.</li>
+                    </ul>
+                </div>
+                <!-- Activités Journalières -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2 text-indigo-600">Activités Journalières</h3>
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <table class="min-w-full">
+                            <thead class="bg-indigo-500 text-white">
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Matin</th>
+                                    <th class="py-2 px-4 border-b">Après-midi</th>
+                                    <th class="py-2 px-4 border-b">Soirée</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">30 min de grammaire avancée</td>
+                                    <td class="py-2 px-4 border-b">Écoute d'un podcast (30 min)</td>
+                                    <td class="py-2 px-4 border-b">Conversation de 15 min sur HelloTalk</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">10 min de lecture avancée</td>
+                                    <td class="py-2 px-4 border-b">Révision de vocabulaire sur Quizlet (20 min)</td>
+                                    <td class="py-2 px-4 border-b">Regarder un épisode de <em>Friends</em> ou des séries similaires avec sous-titres français si besoin</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">10 min de conversation avec votre professeur dédié</td>
+                                    <td class="py-2 px-4 border-b">Révision des notes de vocabulaire (10 min)</td>
+                                    <td class="py-2 px-4 border-b">Écrire un court paragraphe sur votre journée en anglais (10 min)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ressources Spécifiques -->
+            <div class="mt-6">
+                <h3 class="text-2xl font-semibold mb-2 text-indigo-600">Ressources</h3>
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Séries :</strong> <em>Friends</em> avec sous-titres en anglais, <em>The Office</em>, <em>Modern Family</em>, <em>How I Met Your Mother</em>, <em>Brooklyn Nine-Nine</em>, <em>The Big Bang Theory</em>, <em>The Good Doctor</em>, <em>House of Cards</em>, <em>Big Little Lies</em></li>
+                        <li><strong>Podcasts :</strong>
+                            <ul class="list-inside list-disc">
+                                <li><a href="https://www.eslpod.com/" class="text-blue-600 hover:text-blue-800 hover:underline">ESL Podcast</a></li>
+                                <li><a href="https://www.spotify.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Spotify</a> : Téléchargez des podcasts adaptés aux intermédiaires.</li>
+                                <li><a href="https://anchor.fm/" class="text-blue-600 hover:text-blue-800 hover:underline">Anchor</a> : Enregistrez vos propres sessions de pratique.</li>
+                                <li><a href="https://pocketcasts.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Pocket Casts</a> : Écoute hors ligne avec téléchargement.</li>
+                                <li><a href="https://castbox.fm/" class="text-blue-600 hover:text-blue-800 hover:underline">Castbox</a> : Podcasts à télécharger pour écoute hors ligne.</li>
+                                <li><a href="https://www.canalplus.com/emissions-et-series" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+ Podcasts</a> : Divers podcasts éducatifs et de divertissement disponibles via Canal+.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Chaînes YouTube :</strong> <a href="https://www.youtube.com/user/engvidenglish" class="text-blue-600 hover:text-blue-800 hover:underline">EngVid</a>, <a href="https://www.youtube.com/user/englishaddictwithmrdurse" class="text-blue-600 hover:text-blue-800 hover:underline">English Addict with Mr. Duncan</a>, <a href="https://www.youtube.com/user/canalplus" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+ YouTube</a></li>
+                        <li><strong>Films :</strong> Sélectionnez des films anglophones sans sous-titres tels que <em>The Shawshank Redemption</em>, <em>Inception</em>, <em>Forrest Gump</em>, <em>The Social Network</em>, <em>Money Heist (La Casa de Papel)</em>.</li>
+                        <li><strong>Livres :</strong> Choisissez des livres adaptés à votre niveau, comme <em>The Great Gatsby</em>, <em>Harry Potter</em>, <em>1984</em>, <em>To Kill a Mockingbird</em>.</li>
+                        <li><strong>Applications :</strong> Continuez avec <a href="https://www.italki.com/" class="text-blue-600 hover:text-blue-800 hover:underline">iTalki</a>, <a href="https://www.hellotalk.com/" class="text-blue-600 hover:text-blue-800 hover:underline">HelloTalk</a>, <a href="https://www.babbel.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Babbel</a>, <a href="https://www.busuu.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Busuu</a></li>
+                        <li><strong>Plateformes de Streaming :</strong>
+                            <ul class="list-inside list-disc">
+                                <li><a href="https://www.youtube.com/" class="text-blue-600 hover:text-blue-800 hover:underline">YouTube</a> : Accès à une multitude de contenus éducatifs et divertissants en anglais.</li>
+                                <li><a href="https://vimeo.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Vimeo</a> : Pour découvrir des documentaires et des courts métrages en anglais.</li>
+                                <li><a href="https://tubitv.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Tubi</a> : Films et séries gratuits en anglais avec option de sous-titres.</li>
+                                <li><a href="https://www.mycanal.fr/" class="text-blue-600 hover:text-blue-800 hover:underline">MyCanal</a> : Accès à une vaste bibliothèque de séries, films, documentaires et émissions en anglais avec sous-titres français.</li>
+                                <li><a href="https://www.canalplus.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+</a> : Plateforme de streaming offrant du contenu varié en anglais, incluant des films récents, des séries populaires et des documentaires éducatifs.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Outils de Conversation :</strong> <a href="https://character.ai/chat/uc5I6I31YqBLRSLMipGDJAADBxCcZfWYsEuEhqfxFXk" class="text-blue-600 hover:text-blue-800 hover:underline">Votre professeur dédié</a> : Interagissez avec votre professeur dédié pour pratiquer des conversations en anglais.</li>
+                        <li><strong>Playlists BBC Learning English :</strong>
+                            <ul class="list-inside list-disc">
+                                <li><a href="https://www.bbc.co.uk/learningenglish/english/features/6-minute-english" class="text-blue-600 hover:text-blue-800 hover:underline">6 Minute English - Niveau Débutant</a> : Des leçons courtes de 6 minutes couvrant des sujets variés avec un vocabulaire simple et des explications claires.</li>
+                                <li><a href="https://www.bbc.co.uk/learningenglish/english/course/beginner" class="text-blue-600 hover:text-blue-800 hover:underline">English for Beginners</a> : Série spécialement conçue pour les débutants, abordant les bases de la grammaire, du vocabulaire et de la prononciation.</li>
+                                <li><a href="https://www.bbc.co.uk/programmes/p02pc9zn" class="text-blue-600 hover:text-blue-800 hover:underline">The English We Speak - Niveau Débutant</a> : Apprenez des expressions idiomatiques courantes utilisées dans la conversation quotidienne.</li>
+                                <li><a href="https://www.bbc.co.uk/learningenglish/english/course/intermediate/unit-1/session-1" class="text-blue-600 hover:text-blue-800 hover:underline">Basic Grammar</a> : Leçons de grammaire essentielles expliquées de manière simple et accessible.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programme Avancé -->
+        <section id="avance" class="mb-16">
+            <div class="flex items-center mb-4">
+                <svg class="h-8 w-8 text-blue-600 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V10a2 2 0 012-2h2m4-4h4a2 2 0 012 2v4M7 4h.01M7 12h.01" />
+                </svg>
+                <h2 class="text-3xl font-semibold text-blue-700">Programme Avancé (Niveau C1-C2)</h2>
+            </div>
+            <p class="mb-6">Ce programme est destiné aux apprenants expérimentés qui souhaitent atteindre une maîtrise avancée de l'anglais, en développant leurs compétences en conversation, en compréhension orale et écrite, ainsi qu'en expression écrite complexe.</p>
+            
+            <!-- Activités -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Activités Hebdomadaires -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2 text-indigo-600">Activités Hebdomadaires</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>💬 <strong>Conversations</strong> quotidiennes avec des locuteurs natifs sur <strong>iTalki</strong>.</li>
+                        <li>📺 <strong>Visionnage</strong> de séries et films sans sous-titres ou avec sous-titres français si besoin, telles que <em>Breaking Bad</em>, <em>Game of Thrones</em>, <em>Stranger Things</em>, <em>Modern Family</em>, <em>How I Met Your Mother</em>.</li>
+                        <li>🎧 <strong>Écoute</strong> de podcasts avancés sur des sujets variés.</li>
+                        <li>📝 <strong>Écriture</strong> avancée : rédiger des essais ou des histoires courtes.</li>
+                        <li>📚 <strong>Lecture</strong> de livres ou d'articles complexes en anglais.</li>
+                        <li>📝 <strong>Exercices Avancés</strong> : Utilisez les modules avancés d'écriture et de lecture disponibles sur <a href="https://vimeo.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Vimeo</a>.</li>
+                        <li>👩‍🏫 <strong>Conversation avec votre professeur dédié</strong> : Interagissez avec votre professeur dédié pour pratiquer des dialogues avancés en anglais.</li>
+                        <li>📺 <strong>Contenu sur Canal+ et MyCanal</strong> : Séries comme <em>The Crown</em>, <em>House of Cards</em>, <em>Money Heist (La Casa de Papel)</em> disponibles sur Canal+ et MyCanal.</li>
+                    </ul>
+                </div>
+                <!-- Activités Journalières -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2 text-indigo-600">Activités Journalières</h3>
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <table class="min-w-full">
+                            <thead class="bg-indigo-500 text-white">
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Matin</th>
+                                    <th class="py-2 px-4 border-b">Après-midi</th>
+                                    <th class="py-2 px-4 border-b">Soirée</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Lecture d'articles en anglais (30 min)</td>
+                                    <td class="py-2 px-4 border-b">Conversation sur iTalki (30 min)</td>
+                                    <td class="py-2 px-4 border-b">Regarder un épisode de série sans sous-titres ou avec sous-titres français si besoin</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">30 min d'écoute de podcast avancé</td>
+                                    <td class="py-2 px-4 border-b">Écriture d'un journal en anglais (20 min)</td>
+                                    <td class="py-2 px-4 border-b">Visionnage d'un film en anglais sans sous-titres (1 épisode)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">15 min de conversation avec votre professeur dédié</td>
+                                    <td class="py-2 px-4 border-b">Révision des notes de vocabulaire (10 min)</td>
+                                    <td class="py-2 px-4 border-b">Écrire un essai court sur un sujet choisi en anglais (15 min)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ressources Spécifiques -->
+            <div class="mt-6">
+                <h3 class="text-2xl font-semibold mb-2 text-indigo-600">Ressources</h3>
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Séries :</strong> <em>Breaking Bad</em>, <em>Game of Thrones</em>, <em>Stranger Things</em>, <em>Modern Family</em>, <em>How I Met Your Mother</em>, <em>Brooklyn Nine-Nine</em>, <em>The Crown</em>, <em>House of Cards</em>, <em>Money Heist (La Casa de Papel)</em></li>
+                        <li><strong>Podcasts :</strong>
+                            <ul class="list-inside list-disc">
+                                <li><a href="https://www.thisamericanlife.org/" class="text-blue-600 hover:text-blue-800 hover:underline">This American Life</a></li>
+                                <li><a href="https://www.ted.com/podcasts" class="text-blue-600 hover:text-blue-800 hover:underline">TED Talks Daily</a></li>
+                                <li><a href="https://www.spotify.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Spotify</a> : Téléchargez des podcasts avancés.</li>
+                                <li><a href="https://anchor.fm/" class="text-blue-600 hover:text-blue-800 hover:underline">Anchor</a> : Enregistrez vos propres sessions de pratique.</li>
+                                <li><a href="https://pocketcasts.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Pocket Casts</a> : Écoute hors ligne avec téléchargement.</li>
+                                <li><a href="https://castbox.fm/" class="text-blue-600 hover:text-blue-800 hover:underline">Castbox</a> : Podcasts à télécharger pour écoute hors ligne.</li>
+                                <li><a href="https://www.canalplus.com/emissions-et-series" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+ Podcasts</a> : Divers podcasts éducatifs et de divertissement disponibles via Canal+.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Chaînes YouTube :</strong> <a href="https://www.youtube.com/user/engvidenglish" class="text-blue-600 hover:text-blue-800 hover:underline">EngVid</a>, <a href="https://www.youtube.com/user/englishaddictwithmrdurse" class="text-blue-600 hover:text-blue-800 hover:underline">English Addict with Mr. Duncan</a>, <a href="https://www.youtube.com/user/canalplus" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+ YouTube</a></li>
+                        <li><strong>Films :</strong> Sélectionnez des films anglophones sans sous-titres tels que <em>The Shawshank Redemption</em>, <em>Inception</em>, <em>Forrest Gump</em>, <em>The Social Network</em>, <em>Money Heist (La Casa de Papel)</em>.</li>
+                        <li><strong>Livres :</strong> Choisissez des livres adaptés à votre niveau, comme <em>The Great Gatsby</em>, <em>Harry Potter</em>, <em>1984</em>, <em>To Kill a Mockingbird</em>.</li>
+                        <li><strong>Applications :</strong> Continuez avec <a href="https://www.italki.com/" class="text-blue-600 hover:text-blue-800 hover:underline">iTalki</a>, <a href="https://www.hellotalk.com/" class="text-blue-600 hover:text-blue-800 hover:underline">HelloTalk</a>, <a href="https://www.babbel.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Babbel</a>, <a href="https://www.busuu.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Busuu</a></li>
+                        <li><strong>Plateformes de Streaming :</strong>
+                            <ul class="list-inside list-disc">
+                                <li><a href="https://www.youtube.com/" class="text-blue-600 hover:text-blue-800 hover:underline">YouTube</a> : Accès à une multitude de contenus éducatifs et divertissants en anglais.</li>
+                                <li><a href="https://vimeo.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Vimeo</a> : Pour découvrir des documentaires et des courts métrages en anglais.</li>
+                                <li><a href="https://tubitv.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Tubi</a> : Films et séries gratuits en anglais avec option de sous-titres.</li>
+                                <li><a href="https://www.mycanal.fr/" class="text-blue-600 hover:text-blue-800 hover:underline">MyCanal</a> : Accès à une vaste bibliothèque de séries, films, documentaires et émissions en anglais avec sous-titres français.</li>
+                                <li><a href="https://www.canalplus.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+</a> : Plateforme de streaming offrant du contenu varié en anglais, incluant des films récents, des séries populaires et des documentaires éducatifs.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Outils de Conversation :</strong> <a href="https://character.ai/chat/uc5I6I31YqBLRSLMipGDJAADBxCcZfWYsEuEhqfxFXk" class="text-blue-600 hover:text-blue-800 hover:underline">Votre professeur dédié</a> : Interagissez avec votre professeur dédié pour pratiquer des conversations en anglais.</li>
+                        <li><strong>Playlists BBC Learning English :</strong>
+                            <ul class="list-inside list-disc">
+                                <li><a href="https://www.bbc.co.uk/learningenglish/english/features/6-minute-english" class="text-blue-600 hover:text-blue-800 hover:underline">6 Minute English - Niveau Débutant</a> : Des leçons courtes de 6 minutes couvrant des sujets variés avec un vocabulaire simple et des explications claires.</li>
+                                <li><a href="https://www.bbc.co.uk/learningenglish/english/course/beginner" class="text-blue-600 hover:text-blue-800 hover:underline">English for Beginners</a> : Série spécialement conçue pour les débutants, abordant les bases de la grammaire, du vocabulaire et de la prononciation.</li>
+                                <li><a href="https://www.bbc.co.uk/programmes/p02pc9zn" class="text-blue-600 hover:text-blue-800 hover:underline">The English We Speak - Niveau Débutant</a> : Apprenez des expressions idiomatiques courantes utilisées dans la conversation quotidienne.</li>
+                                <li><a href="https://www.bbc.co.uk/learningenglish/english/course/intermediate/unit-1/session-1" class="text-blue-600 hover:text-blue-800 hover:underline">Basic Grammar</a> : Leçons de grammaire essentielles expliquées de manière simple et accessible.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conseils Pratiques -->
+        <section id="conseils" class="mb-16">
+            <div class="flex items-center mb-4">
+                <svg class="h-8 w-8 text-blue-600 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h2 class="text-3xl font-semibold text-blue-700">Conseils Pratiques</h2>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <ul class="list-disc list-inside space-y-4">
+                    <li><strong>📈 Mesure des progrès :</strong> Tenez un journal d'apprentissage pour noter vos progrès et défis quotidiens. Utilisez des outils comme Google Sheets ou des applications dédiées.</li>
+                    <li><strong>🎯 Objectifs hebdomadaires :</strong> Fixez-vous des objectifs SMART (Spécifiques, Mesurables, Atteignables, Réalistes, Temporellement définis). Par exemple, "Apprendre 100 nouveaux mots cette semaine".</li>
+                    <li><strong>🛠️ Utilisation des outils :</strong> Utilisez <strong>Duolingo</strong> pour la grammaire, <strong>Memrise</strong> pour le vocabulaire, <strong>Quizlet</strong> pour créer vos propres fiches de révision, et <strong>Anki</strong> pour les flashcards personnalisées.</li>
+                    <li><strong>🔄 Variation des activités :</strong> Alternez entre écoute, lecture, écriture et conversation pour garder la motivation. Intégrez des jeux linguistiques pour rendre l'apprentissage ludique.</li>
+                    <li><strong>🌐 Immersion :</strong> Changez la langue de vos appareils électroniques en anglais. Suivez des comptes anglophones sur les réseaux sociaux et participez à des forums en anglais.</li>
+                    <li><strong>🕰️ Gestion du temps :</strong> Intégrez des sessions courtes mais fréquentes dans votre emploi du temps. Utilisez des techniques comme le Pomodoro (25 minutes d'étude suivies de 5 minutes de pause).</li>
+                    <li><strong>📅 Planification :</strong> Utilisez un agenda ou une application de gestion du temps pour planifier vos sessions d'apprentissage et suivre vos progrès.</li>
+                    <li><strong>💡 Motivation :</strong> Rappelez-vous régulièrement pourquoi vous apprenez l'anglais. Fixez-vous des récompenses pour atteindre vos objectifs.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Programme Quotidien Après les 12 Semaines -->
+        <section id="programme-quotidien" class="mb-16">
+            <div class="flex items-center mb-4">
+                <svg class="h-8 w-8 text-blue-600 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3m6 0c0 1.657-1.343 3-3 3m6 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h2 class="text-3xl font-semibold text-blue-700">Programme Quotidien Après les 12 Semaines</h2>
+            </div>
+            <p class="mb-6">Pour maintenir et améliorer votre niveau d'anglais, intégrez ces activités dans votre routine quotidienne :</p>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <ul class="list-disc list-inside space-y-4">
+                    <li>📖 <strong>Lecture :</strong> Lire des articles, des blogs ou des livres en anglais pendant 30 minutes.</li>
+                    <li>🎧 <strong>Écoute :</strong> Écouter des podcasts ou de la musique en anglais lors de vos déplacements ou pendant vos pauses.</li>
+                    <li>💬 <strong>Conversation :</strong> Participer à des conversations en ligne via <strong>iTalki</strong>, <strong>HelloTalk</strong>, ou rejoindre des clubs de discussion.</li>
+                    <li>📝 <strong>Écriture :</strong> Tenir un journal intime en anglais ou rédiger des courriels pour pratiquer l'écriture.</li>
+                    <li>📺 <strong>Visionnage :</strong> Continuer à regarder des séries et films en anglais sans sous-titres ou avec sous-titres français si besoin pour renforcer la compréhension orale.</li>
+                    <li>🧩 <strong>Jeux Linguistiques :</strong> Utiliser des applications ou des jeux en anglais pour maintenir l'engagement.</li>
+                    <li>🌐 <strong>Immersion Digitale :</strong> Naviguer sur internet en anglais, changer la langue de vos réseaux sociaux et utiliser des outils en anglais.</li>
+                    <li>👩‍🏫 <strong>Conversation avec votre professeur dédié</strong> : Interagissez régulièrement avec votre professeur dédié pour pratiquer des conversations en anglais.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contenu Alternatif -->
+        <section id="contenu-alternatif" class="mb-16">
+            <div class="flex items-center mb-4">
+                <svg class="h-8 w-8 text-blue-600 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+                <h2 class="text-3xl font-semibold text-blue-700">Contenu Alternatif</h2>
+            </div>
+            <p class="mb-6">Au cas où certains contenus mentionnés précédemment ne seraient pas disponibles, voici une liste de contenus alternatifs accessibles au Congo Brazzaville :</p>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <ul class="list-disc list-inside space-y-4">
+                    <!-- Alternatives pour Débutant -->
+                    <li><strong>Séries Alternatives pour Débutants :</strong>
+                        <ul class="list-inside list-disc">
+                            <li><em>Bluey</em> : Série animée australienne amusante pour les enfants.</li>
+                            <li><em>Paw Patrol</em> : Série animée sur des chiens sauveteurs.</li>
+                            <li><em>Dora the Explorer</em> : Série éducative interactive pour les enfants.</li>
+                            <li><em>My Little Pony: Friendship Is Magic</em> : Série animée sur l'amitié et les aventures.</li>
+                        </ul>
+                    </li>
+                    <!-- Alternatives pour Intermédiaire -->
+                    <li><strong>Séries Alternatives pour Intermédiaires :</strong>
+                        <ul class="list-inside list-disc">
+                            <li><em>Modern Family</em> : Comédie sur une famille moderne.</li>
+                            <li><em>How I Met Your Mother</em> : Comédie sur les aventures amoureuses de cinq amis.</li>
+                            <li><em>Brooklyn Nine-Nine</em> : Comédie policière divertissante.</li>
+                            <li><em>The Big Bang Theory</em> : Comédie sur un groupe d'amis scientifiques.</li>
+                        </ul>
+                    </li>
+                    <!-- Alternatives pour Avancé -->
+                    <li><strong>Séries Alternatives pour Avancés :</strong>
+                        <ul class="list-inside list-disc">
+                            <li><em>Breaking Bad</em> : Série dramatique intense sur un professeur de chimie devenu fabricant de méthamphétamine.</li>
+                            <li><em>Game of Thrones</em> : Série fantastique épique basée sur les romans de George R.R. Martin.</li>
+                            <li><em>Stranger Things</em> : Série de science-fiction et d'horreur mystérieuse.</li>
+                            <li><em>The Crown</em> : Série dramatique sur la vie de la Reine Elizabeth II.</li>
+                            <li><em>House of Cards</em> : Série politique sur le pouvoir et la manipulation.</li>
+                            <li><em>Money Heist (La Casa de Papel)</em> : Série dramatique sur un groupe de braqueurs.</li>
+                        </ul>
+                    </li>
+                    <!-- Podcasts Alternatifs -->
+                    <li><strong>Podcasts Alternatives :</strong>
+                        <ul class="list-inside list-disc">
+                            <li><a href="https://www.stitcher.com/podcast/the-daily" class="text-blue-600 hover:text-blue-800 hover:underline">The Daily</a> : Actualités quotidiennes pour rester informé et pratiquer votre écoute.</li>
+                            <li><a href="https://www.bbc.co.uk/programmes/p02pc9zn" class="text-blue-600 hover:text-blue-800 hover:underline">The English We Speak</a> : Petites leçons sur des expressions courantes.</li>
+                            <li><a href="https://open.spotify.com/show/3y3IDUzC4FScmnkjW01V62" class="text-blue-600 hover:text-blue-800 hover:underline">TED Talks Daily</a> : Idées inspirantes et discussions variées.</li>
+                            <li><a href="https://www.canalplus.com/emissions-et-series" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+ Podcasts</a> : Divers podcasts éducatifs et de divertissement disponibles via Canal+.</li>
+                        </ul>
+                    </li>
+                    <!-- Chaînes YouTube Alternatives -->
+                    <li><strong>Chaînes YouTube Alternatives :</strong>
+                        <ul class="list-inside list-disc">
+                            <li><a href="https://www.youtube.com/channel/UCz4tgANd4yy8Oe0iXCdSWfA" class="text-blue-600 hover:text-blue-800 hover:underline">English with Lucy</a> : Leçons de grammaire et de prononciation avancées.</li>
+                            <li><a href="https://www.youtube.com/user/learnenglishwithtvseries" class="text-blue-600 hover:text-blue-800 hover:underline">Learn English with TV Series</a> : Apprendre l'anglais en regardant des extraits de séries populaires.</li>
+                            <li><a href="https://www.youtube.com/user/canalplus" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+ YouTube</a> : Contenu exclusif et bandes-annonces de séries et films disponibles sur Canal+.</li>
+                        </ul>
+                    </li>
+                    <!-- Applications Alternatives -->
+                    <li><strong>Applications Alternatives :</strong>
+                        <ul class="list-inside list-disc">
+                            <li><a href="https://www.babbel.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Babbel</a> : Cours interactifs avec des exercices pratiques.</li>
+                            <li><a href="https://www.busuu.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Busuu</a> : Apprentissage basé sur la conversation avec des locuteurs natifs.</li>
+                            <li><a href="https://www.canalplus.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+ Apps</a> : Applications mobiles de Canal+ pour accéder à des contenus en streaming.</li>
+                        </ul>
+                    </li>
+                    <!-- Plateformes de Streaming Alternatives -->
+                    <li><strong>Plateformes de Streaming Alternatives :</strong>
+                        <ul class="list-inside list-disc">
+                            <li><a href="https://www.youtube.com/" class="text-blue-600 hover:text-blue-800 hover:underline">YouTube</a> : Accès à une multitude de contenus éducatifs et divertissants en anglais.</li>
+                            <li><a href="https://vimeo.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Vimeo</a> : Pour découvrir des documentaires et des courts métrages en anglais.</li>
+                            <li><a href="https://tubitv.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Tubi</a> : Films et séries gratuits en anglais avec option de sous-titres.</li>
+                            <li><a href="https://www.mycanal.fr/" class="text-blue-600 hover:text-blue-800 hover:underline">MyCanal</a> : Accès à une vaste bibliothèque de séries, films, documentaires et émissions en anglais avec sous-titres français.</li>
+                            <li><a href="https://www.canalplus.com/" class="text-blue-600 hover:text-blue-800 hover:underline">Canal+</a> : Plateforme de streaming offrant du contenu varié en anglais, incluant des films récents, des séries populaires et des documentaires éducatifs.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-6 no-print">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Programmes d'Apprentissage de l'Anglais. Tous droits réservés.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-white hover:text-gray-300">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.23 5.924a.998.998 0 00-.975-.92H1.752A.997.997 0 001.778 7.8v8.4a.998.998 0 00.975.92h19.502a.997.997 0 00.975-.92V5.924zM8.077 19.575V9.218H5.59v10.357h2.487zm-1.243-11.9a1.44 1.44 0 110-2.88 1.44 1.44 0 010 2.88zm15.002 11.9V14.08c0-2.58-1.35-3.77-3.134-3.77-1.446 0-2.325.772-2.704 1.303v-1.12h-2.487c.034.705 0 10.357 0 10.357h2.487v-5.754c0-.31.023-.62.115-.846.252-.62.826-1.27 1.794-1.27 1.28 0 1.798.957 1.798 2.36v5.88h2.487z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.325.975.975 1.263 2.242 1.325 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.35 2.633-1.325 3.608-.975.975-2.242 1.263-3.608 1.325-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.325-.975-.975-1.263-2.242-1.325-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.35-2.633 1.325-3.608.975-.975 2.242-1.263 3.608-1.325C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.77.131 4.608.45 3.678 1.38 2.748 2.31 2.429 3.472 2.37 4.754 2.311 6.034 2.298 6.443 2.298 12s.013 5.966.072 7.246c.059 1.282.378 2.444 1.308 3.374.93.93 2.092 1.249 3.374 1.308 1.28.059 1.689.072 7.246.072s5.966-.013 7.246-.072c1.282-.059 2.444-.378 3.374-1.308.93-.93 1.249-2.092 1.308-3.374.059-1.28.072-1.689.072-7.246s-.013-5.966-.072-7.246c-.059-1.282-.378-2.444-1.308-3.374-.93-.93-2.092-1.249-3.374-1.308C17.966.013 17.557 0 12 0z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 11-12 0 6 6 0 0112 0zm-8 6a8 8 0 0116 0v4a2 2 0 01-2 2h-12a2 2 0 01-2-2v-4z"/>
+                    </svg>
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
