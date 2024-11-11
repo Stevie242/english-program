@@ -1,100 +1,125 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Programmes d'Apprentissage de l'Anglais</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Intégration de Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Intégration de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        /* Styles pour l'impression */
-        @media print {
-            /* Définir la taille de la page et les marges */
-            @page {
-                size: A4;
-                margin: 20mm;
-            }
-
+    <head>
+        <meta charset="UTF-8">
+        <title>Programmes d'Apprentissage de l'Anglais - CDS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Découvrez les programmes d'apprentissage de l'anglais adaptés à tous les niveaux. Avancez avec des méthodes interactives et progressives, conçues par CDS pour une maîtrise rapide et efficace de l'anglais.">
+        <meta name="keywords" content="apprentissage anglais, programme d'anglais, niveaux débutant, intermédiaire, avancé, CDS, cours d'anglais, apprendre l'anglais rapidement">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Congo Digital Services (CDS)">
+    
+        <!-- Open Graph Metadata (Facebook, LinkedIn) -->
+        <meta property="og:title" content="Programmes d'Apprentissage de l'Anglais - CDS">
+        <meta property="og:description" content="Choisissez le programme d'apprentissage de l'anglais adapté à votre niveau et progressez efficacement.">
+        <meta property="og:image" content="URL_DE_L_IMAGE"> <!-- Remplacez URL_DE_L_IMAGE par l'URL de l'image à partager -->
+        <meta property="og:url" content="URL_DU_SITE"> <!-- Remplacez URL_DU_SITE par l'URL de votre site -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="CDS">
+    
+        <!-- Twitter Card Metadata -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Programmes d'Apprentissage de l'Anglais - CDS">
+        <meta name="twitter:description" content="Découvrez les programmes d'apprentissage de l'anglais conçus par CDS pour tous les niveaux, de débutant à avancé.">
+        <meta name="twitter:image" content="URL_DE_L_IMAGE"> <!-- Remplacez URL_DE_L_IMAGE par l'URL de l'image à partager -->
+    
+        <!-- Favicon -->
+        <link rel="icon" href="URL_DU_FAVICON" type="image/png"> <!-- Remplacez URL_DU_FAVICON par l'URL de votre favicon -->
+    
+        <!-- Intégration de Tailwind CSS via CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    
+        <!-- Intégration de Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+        <style>
             body {
-                /* Conserver le fond et les couleurs */
-                /* Note : Les arrière-plans peuvent ne pas s'imprimer selon le navigateur */
-                color: inherit;
-                background: inherit;
+                font-family: 'Open Sans', sans-serif;
             }
-
-            /* Conserver les éléments essentiels */
-            /* Supprimer la règle qui cache header, footer, nav, etc. */
-            /* header, footer, nav, .no-print {
-                display: none;
-            } */
-
-            /* Conserver les couleurs de fond */
-            /* Retirer les règles qui suppriment les couleurs de fond et définissent le texte en noir */
-            /*
-            .bg-gradient-to-r, .bg-blue-600, .bg-indigo-600, .bg-blue-700, .bg-indigo-500, .bg-blue-800, .bg-indigo-700 {
-                background: none !important;
-                color: #000 !important;
+    
+            /* Styles pour l'impression */
+            @media print {
+                /* Définir la taille de la page et les marges */
+                @page {
+                    size: A4;
+                    margin: 20mm;
+                }
+    
+                body {
+                    /* Conserver le fond et les couleurs */
+                    /* Note : Les arrière-plans peuvent ne pas s'imprimer selon le navigateur */
+                    color: inherit;
+                    background: inherit;
+                }
+    
+                /* Conserver les éléments essentiels */
+                /* Supprimer la règle qui cache header, footer, nav, etc. */
+                /* header, footer, nav, .no-print {
+                    display: none;
+                } */
+    
+                /* Conserver les couleurs de fond */
+                /* Retirer les règles qui suppriment les couleurs de fond et définissent le texte en noir */
+                /*
+                .bg-gradient-to-r, .bg-blue-600, .bg-indigo-600, .bg-blue-700, .bg-indigo-500, .bg-blue-800, .bg-indigo-700 {
+                    background: none !important;
+                    color: #000 !important;
+                }
+                */
+    
+                /* Optimiser les tableaux */
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+    
+                th, td {
+                    border: 1px solid #000;
+                    padding: 8px;
+                    text-align: left;
+                }
+    
+                /* Contrôle des sauts de page */
+                section {
+                    page-break-after: avoid;
+                    page-break-inside: avoid;
+                }
+    
+                h1, h2, h3 {
+                    page-break-after: avoid;
+                }
+    
+                /* Réduire les marges internes */
+                .container {
+                    padding: 0;
+                }
+    
+                /* Ajuster les espacements */
+                .mb-16, .mb-12, .mb-8, .mb-6 {
+                    margin-bottom: 1em !important;
+                }
+    
+                /* Ajuster les polices pour l'impression */
+                h1 {
+                    font-size: 24pt;
+                }
+    
+                h2 {
+                    font-size: 18pt;
+                }
+    
+                h3 {
+                    font-size: 14pt;
+                }
+    
+                p, ul, li, table, th, td {
+                    font-size: 12pt;
+                    line-height: 1.5;
+                }
             }
-            */
-
-            /* Optimiser les tableaux */
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-
-            th, td {
-                border: 1px solid #000;
-                padding: 8px;
-                text-align: left;
-            }
-
-            /* Contrôle des sauts de page */
-            section {
-                page-break-after: avoid;
-                page-break-inside: avoid;
-            }
-
-            h1, h2, h3 {
-                page-break-after: avoid;
-            }
-
-            /* Réduire les marges internes */
-            .container {
-                padding: 0;
-            }
-
-            /* Ajuster les espacements */
-            .mb-16, .mb-12, .mb-8, .mb-6 {
-                margin-bottom: 1em !important;
-            }
-
-            /* Ajuster les polices pour l'impression */
-            h1 {
-                font-size: 24pt;
-            }
-
-            h2 {
-                font-size: 18pt;
-            }
-
-            h3 {
-                font-size: 14pt;
-            }
-
-            p, ul, li, table, th, td {
-                font-size: 12pt;
-                line-height: 1.5;
-            }
-        }
-    </style>
-</head>
+        </style>
+    </head>
+    
 <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
     <header class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-8 shadow-lg no-print">
